@@ -1,0 +1,66 @@
+$ nano etc.txt
+
+$ ./etc.txt
+Hello world
+
+$ ls -p
+Helloworld.java  a/  a.txt  abc/  abc.txt  add.sh  case.sh  copyfile.sh  def/  def.txt  emp.sh  employee.sh  etc.txt  greater.sh
+
+$ ls /etc
+DIR_COLORS        bash.bashrc      fstab          gitconfig  inputrc              msystem  nanorc    nsswitch.conf         pkcs11/  profile     protocols  ssh/   vimrc
+bash.bash_logout  docx2txt.config  gitattributes  hosts      install-options.txt  mtab@    networks  package-versions.txt  pki/     profile.d/  services   tigrc
+
+$ ls /etc/pki
+ca-trust/
+
+
+// 2. Move files from one folder to the respective folder
+a) $ touch abc.txt def.txt ghi.txt jkl.txt
+
+b) $ ls *.txt
+a.txt  abc.txt  def.txt  etc.txt  ghi.txt  jkl.txt
+
+c) $ basename -s .txt *.txt
+a
+abc
+def
+etc
+ghi
+jkl
+
+c.2) $ find . -type f -name "*.txt"
+./a/a.txt
+./a.txt
+./abc/abc.txt
+./abc.txt
+./def/def.txt
+./def.txt
+./etc.txt
+./ghi.txt
+./jkl.txt
+
+ d) $ mkdir abc def ghi jkl
+   
+  $ ls .
+Helloworld.java  abc/     case.sh      def.txt      etc.txt  greater.sh
+a/               abc.txt  copyfile.sh  emp.sh       ghi/     jkl/
+a.txt            add.sh   def/         employee.sh  ghi.txt  jkl.txt
+
+ e) $ mv abc.txt abc def.txt def ghi.txt ghi jkl.txt jkl
+
+   $ ls .
+Helloworld.java  a.txt   case.sh      emp.sh       etc.txt     jkl/
+a/               add.sh  copyfile.sh  employee.sh  greater.sh
+
+// 3. $ touch abc.log.1 def.log.1 ghi.log.1 jkl.log.1 mno.log.1
+      $ ls -p
+Helloworld.java  abc.log.1  copyfile.sh  employee.sh  greater.sh  mno.log.1
+a/               add.sh     def.log.1    etc.txt      jkl/
+a.txt            case.sh    emp.sh       ghi.log.1    jkl.log.1
+
+        
+
+ 
+
+
+   
